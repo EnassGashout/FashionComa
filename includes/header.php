@@ -80,15 +80,16 @@
                                              $query->execute(array($_SESSION['userid']));
                                            $result = $query->fetch();
                                        echo '<li><a href="about.php?userId=' . $result['ID'] . '"> Profile </a></li>'; ?>
+                                     <?php 
+                                        }
+                                    ?>
                                         <li><a href="popular.php">Popular</a></li>
                                         <li><a href="travel.php">Travel</a></li>
                                         <li><a href="Fashion.php">Fashion</a></li>
                                         <li><a href="music.php">Music</a></li>
                                         <li><a href="contact.php">contact</a></li>
                                     </ul>
-                                    <?php 
-                                        }
-                                    ?>
+                                    
 
                                     <!-- mobile menu -->
                                     <ul class="mobile-menu clearfix">
