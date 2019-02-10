@@ -76,7 +76,7 @@
                                     <div class="content-box overlay-item">
                                         <div class="inner-box">
                                             <div class="image-box">
-                                                <figure class="image"><img src="images\travel\<?php echo $result['blogIMG']; ?>" alt=""></figure>
+                                                <figure class="image"><img src="images\blog\<?php echo $result['blogIMG']; ?>" alt=""></figure>
                                                 <div class="overlay-box">
                                                     <div class="overlay-inner">
                                                         <div class="content">
