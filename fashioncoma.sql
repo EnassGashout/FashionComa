@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 11, 2019 at 08:15 AM
+-- Generation Time: Feb 11, 2019 at 08:42 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -45,7 +45,8 @@ CREATE TABLE `blogs` (
 INSERT INTO `blogs` (`ID`, `blogTitle`, `blogDesc`, `blogIMG`, `addDate`, `userID`, `specID`) VALUES
 (1, 'How to Get From Ataturk Airport to Istanbul City Centre', '<p>\r\nIstanbul is the top visited destination in Turkey. So imagine the millions of foreign tourists that it receives every year! There are two airports in Istanbul but Ataturk airport is the busiest and most tourists will arrive via that route.</p>', 'turkey.jpg', '2019-02-10 20:49:26', 2, 2),
 (2, 'La dolce vita', '<p>those three words sum up so well the picture that most people have of this wonderful country called Italy. It\'s all about the sweet life there, from the food to the fashion, the villas to the vineyards, the piazzas to the Piaggios</p>', 'italy.jpg', '2019-02-10 20:53:23', 1, 2),
-(3, 'Beethoven', '<p> The Moonlight Sonata is not only the most famous of the Beethoven Sonatas, but is a candidate for the most famous piece of serious art music</p>', 'sonata.jpg', '2019-02-10 21:00:10', 1, 1);
+(3, 'Beethoven', '<p> The Moonlight Sonata is not only the most famous of the Beethoven Sonatas, but is a candidate for the most famous piece of serious art music</p>', 'sonata.jpg', '2019-02-10 21:00:10', 1, 1),
+(4, 'Fashion Advices', '<p>1-Balance proportions. Jessica Antola. ...\r\n2-Wear trends in an age-appropriate way. ...\r\n3-The right bra makes you look slimmer. ...\r\n4-Don\'t be too matchy matchy. ...\r\n5-Show skin selectively. ...\r\n6-Spend as much as you can afford on staples. ...\r\n7-Develop a signature style. ...\r\n8-Everyone should own a classic white shirt.</p>', 'advicefashion.jpg', '2019-02-11 07:41:22', 3, 3);
 
 -- --------------------------------------------------------
 
@@ -103,7 +104,8 @@ INSERT INTO `likes` (`ID`, `blogID`, `userID`) VALUES
 (3, 1, 2),
 (4, 1, 2),
 (5, 1, 2),
-(6, 3, 1);
+(6, 3, 1),
+(7, 4, 3);
 
 -- --------------------------------------------------------
 
@@ -181,7 +183,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `blogs`
 --
 ALTER TABLE `blogs`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -199,7 +201,7 @@ ALTER TABLE `comments`
 -- AUTO_INCREMENT for table `likes`
 --
 ALTER TABLE `likes`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `users`
