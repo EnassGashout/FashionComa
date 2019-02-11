@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 03, 2019 at 09:16 PM
--- Server version: 10.1.35-MariaDB
--- PHP Version: 7.2.9
+-- Generation Time: Feb 11, 2019 at 08:15 AM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.2.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -37,6 +37,15 @@ CREATE TABLE `blogs` (
   `userID` int(11) NOT NULL,
   `specID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `blogs`
+--
+
+INSERT INTO `blogs` (`ID`, `blogTitle`, `blogDesc`, `blogIMG`, `addDate`, `userID`, `specID`) VALUES
+(1, 'How to Get From Ataturk Airport to Istanbul City Centre', '<p>\r\nIstanbul is the top visited destination in Turkey. So imagine the millions of foreign tourists that it receives every year! There are two airports in Istanbul but Ataturk airport is the busiest and most tourists will arrive via that route.</p>', 'turkey.jpg', '2019-02-10 20:49:26', 2, 2),
+(2, 'La dolce vita', '<p>those three words sum up so well the picture that most people have of this wonderful country called Italy. It\'s all about the sweet life there, from the food to the fashion, the villas to the vineyards, the piazzas to the Piaggios</p>', 'italy.jpg', '2019-02-10 20:53:23', 1, 2),
+(3, 'Beethoven', '<p> The Moonlight Sonata is not only the most famous of the Beethoven Sonatas, but is a candidate for the most famous piece of serious art music</p>', 'sonata.jpg', '2019-02-10 21:00:10', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -84,6 +93,18 @@ CREATE TABLE `likes` (
   `userID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `likes`
+--
+
+INSERT INTO `likes` (`ID`, `blogID`, `userID`) VALUES
+(1, 2, 1),
+(2, 2, 1),
+(3, 1, 2),
+(4, 1, 2),
+(5, 1, 2),
+(6, 3, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -95,11 +116,22 @@ CREATE TABLE `users` (
   `FullName` varchar(50) NOT NULL,
   `UserName` varchar(50) NOT NULL,
   `Password` varchar(75) NOT NULL,
+  `email` varchar(50) NOT NULL,
   `favoriteQuote` text NOT NULL,
   `workfield` varchar(75) NOT NULL,
   `bio` text NOT NULL,
   `userIMG` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`ID`, `FullName`, `UserName`, `Password`, `email`, `favoriteQuote`, `workfield`, `bio`, `userIMG`) VALUES
+(1, 'Enass Gashout', 'enassgashout', 'password', 'enassgashout@gmail.com', 'create happeness if u can\'t find it', 'still student', 'nothing to be shown', 'enass.jpg'),
+(2, 'AnisaAlmejrese', 'anisa99', '123', 'anisa@gmail.com', 'be strong', 'studying', 'nothing', 'defult.jpg'),
+(3, 'ReamBenMahmoud', 'ream', '123', 'ream@gmail.com', 'nothing', 'student', 'bio', ''),
+(4, 'tester', 'tester', '123', 'test@gmail.com', 'nothing', 'nothing', 'nothing', '');
 
 --
 -- Indexes for dumped tables
@@ -149,7 +181,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `blogs`
 --
 ALTER TABLE `blogs`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -167,13 +199,13 @@ ALTER TABLE `comments`
 -- AUTO_INCREMENT for table `likes`
 --
 ALTER TABLE `likes`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
