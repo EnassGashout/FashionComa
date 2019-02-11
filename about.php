@@ -1,4 +1,10 @@
+<?php
+ob_start();
+include 'includes/connect.php';
 
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,8 +27,8 @@
     <!-- /.preloader -->
     <?php include "includes/header.php" ;?>
     <?php
-    if(isset($_GET['userid'])){
-        $id = $_GET['userid'];
+    if(isset($_GET['userId'])){
+        $id = $_GET['userId'];
         $sql = "
         SELECT FullName, favoriteQuote, workfield, bio, userIMG, ID as userId
          FROM users WHERE users.ID = ?";
