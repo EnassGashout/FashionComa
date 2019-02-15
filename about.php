@@ -79,7 +79,7 @@ include 'includes/connect.php';
                         <p>some of my posts</p>
                     </div>
                     <ul class="list">
-                        <li><a href="post1.php?blogID=<?php echo $result['ID']; ?>"> <?php echo $result['blogTitle']; ?> </a></li>
+                        <li><a href="post1.php?id=<?php echo $result['ID']; ?>"> <?php echo $result['blogTitle']; ?> </a></li>
                         
                         
                     </ul>
